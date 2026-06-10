@@ -41,6 +41,11 @@ def print_error(message):
     """Print an error message in red."""
     print(f"{RED}✘ {message}{RESET}")
 
+def print_summary(tasks):
+      pending = sum(1 for t in tasks if t["status"] == "pending")
+      done = sum(1 for t in tasks if t["status"] == "completed")
+      print(f"\nTotal: {len(tasks)} | Pending: {pending} | Completed: {done}\n")
+
 
 def print_task_table(tasks):
     """Display a formatted table of tasks.
