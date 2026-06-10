@@ -147,3 +147,15 @@ class TaskManager:
             if query_lower in found_task.get("title", "").lower()
             or query_lower in found_task.get("description", "").lower()
         ]
+    
+
+    def get_overdue_tasks(self):
+      """Return all pending tasks whose due date has passed."""
+      from datetime import date
+      today = date.today().strftime("%Y-%m-%d")
+      return [
+          t for t in self.tasks
+          if t["status"] == "pending"
+          and t["due_date"]
+          and t["due_date"] < today
+      ]
