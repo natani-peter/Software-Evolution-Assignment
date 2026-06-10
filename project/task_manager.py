@@ -75,7 +75,7 @@ class TaskManager:
         if status_filter:
             results = [t for t in results if t["status"] == status_filter]
 
-        results.sort(key=lambda t: t["created_at"])
+        results.sort(key=lambda t: (priority_order.get(t["priority"], 99), t["created_at"]))
         return results
 
     def complete_task(self, task_id):
