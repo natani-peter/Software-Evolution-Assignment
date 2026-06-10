@@ -143,7 +143,7 @@ class TaskManager:
         """
         query_lower = query.lower()
         return [
-            t for t in self.tasks
-            if query_lower in t["title"].lower()
-            or query_lower in t.get("description", "").lower()
+            found_task for found_task in self.tasks
+            if query_lower in found_task.get("title", "").lower()
+            or query_lower in found_task.get("description", "").lower()
         ]
