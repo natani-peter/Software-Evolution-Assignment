@@ -19,7 +19,7 @@ def validate_date(date_str):
         datetime.strptime(date_str, "%Y-%m-%d")
     except ValueError:
         raise ValueError(
-            f"Invalid date format '{date_str}'. Expected format: YYYY-MM-DD (e.g. 2026-06-15)"
+            f"Please use a valid date format. Expected format: YYYY-MM-DD (e.g. 2026-06-15)"
         )
 
 
