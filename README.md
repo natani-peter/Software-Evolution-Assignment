@@ -87,13 +87,13 @@ python main.py list --priority high
 
 ```
 Software-Evolution-Assignment/
-├── main.py              # Entry point
-├── task_manager.py      # Core task management logic
-├── storage.py           # JSON persistence layer
-├── ui.py                # Command-line interface helpers
-├── validator.py         # Input validation module
-├── requirements.txt     # Python dependencies
-├── tasks.json           # Task data storage (auto-generated)
+├── project/main.py              # Entry point
+├── project/task_manager.py      # Core task management logic
+├── project/storage.py           # JSON persistence layer
+├── project/ui.py                # Command-line interface helpers
+├── project/validator.py         # Input validation module
+├── project/requirements.txt     # Python dependencies
+├── project/tasks.json           # Task data storage (auto-generated)
 ├── README.md
 ├── LICENSE
 └── CONTRIBUTING.md
